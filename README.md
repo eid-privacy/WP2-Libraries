@@ -19,3 +19,12 @@ issuing diplomas to the new infrastructure
 * [polygonzero-plonky2](./Libraries/polygonzero-plonky2.md) - Plonky2 SNARK implementation, also a fast implementation of STARK. Might be a good base to experiment with both and try out implementation based on different mathematical constructions (as hinted in the STARK paper). Notably: was audited before version 1.0
 * [arkworks-crypto-primitives](./Libraries/arkworks-crypto-primitives.md) - "building blocks" such as hash functions, commitment, PRFs, R1CS constraint systems, etc.
 * [docknetwork-crypto](./Libraries/docknetwork-crypto.md) - Sigma protocols, BBS(+) signatures, accumulators, LegoGroth16, OT(E), a full toolbox for ZK cryptography
+
+## Communication Protocols
+We list here the libraries that implement different communication protocols. These communication protocols
+specify a way for issuers/verifiers/holders to communicate with each other within the 
+Self-Sovereign Identities eco-system.
+
+Current protocols considered:
+
+- [OpenID4VC](./Communication-Protocols/OpenID4VC.md)
