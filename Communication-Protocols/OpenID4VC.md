@@ -29,7 +29,7 @@ OpenID for Verifiable Credentials (OID4VC) is a family of protocols enabling sec
 | [TrustBloc wallet-sdk](https://github.com/trustbloc/wallet-sdk)                           | Go              | Wallet               | OID4VP support for credential presentation   | well-documented              |
 
 ## SIOPv2 (Self-Issued OpenID Provider v2)
-Sometimes offered by other libraries, but doesn't have its own library
+Sometimes offered by other OID4VP libraries, but doesn't have its own library.
 ToDo: How does this fit within the E-ID eco-system. Any usecases?
 
 ### OpenID4VP over BLE
