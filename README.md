@@ -21,10 +21,5 @@ issuing diplomas to the new infrastructure
 * [docknetwork-crypto](./Libraries/docknetwork-crypto.md) - Sigma protocols, BBS(+) signatures, accumulators, LegoGroth16, OT(E), a full toolbox for ZK cryptography
 
 ## Communication Protocols
-We list here the libraries that implement different communication protocols. These communication protocols
-specify a way for issuers/verifiers/holders to communicate with each other within the 
-Self-Sovereign Identities eco-system.
-
-Current protocols considered:
-
-- [OpenID4VC](./Communication-Protocols/OpenID4VC.md)
+There are multiple communication protocols that are widely used within the E-ID ecosystem.  
+Check [Communication Protocols](./Communication-Protocols/README.md) for a detailed list.
