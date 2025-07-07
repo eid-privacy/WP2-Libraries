@@ -38,9 +38,9 @@ However, there's no available implementations for it so far, except for this one
 
 ## Notable framework
 
-| Library / Repo | Language | Description |
-| --- | --- | --- |
-| **Veramo**  | TypeScript | automates lots of processes. Could be a useful reference for SWIYU automation |
+| Library / Repo                                                 | Language   | Description                                                                   |
+|----------------------------------------------------------------|------------|-------------------------------------------------------------------------------|
+| **[Veramo](https://github.com/decentralized-identity/veramo)** | TypeScript | automates lots of processes. Could be a useful reference for SWIYU automation |
 
 
 ## Summary Table
