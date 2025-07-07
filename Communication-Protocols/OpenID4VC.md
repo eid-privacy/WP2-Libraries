@@ -30,6 +30,11 @@ OpenID for Verifiable Credentials (OID4VC) is a family of protocols enabling sec
 ## SIOPv2 (Self-Issued OpenID Provider v2)
 Sometimes offered by other libraries, but doesn't have its own library
 ToDo: How does this fit within the E-ID eco-system. Any usecases?
+
+### OpenID4VP over BLE
+This is an important specification that covers the Bluetooth Low Energy transport layer for transmitting Verifiable Credentials.  
+However, there's no available implementations for it so far, except for this one [talk](https://fosdem.org/2025/schedule/event/fosdem-2025-6575-sample-implementation-of-openid-4-verifiable-presentation-over-bluetooth-low-energy/) from FOSDEM 2025
+
 ## Notable framework
 
 | Library / Repo | Language | Description |
