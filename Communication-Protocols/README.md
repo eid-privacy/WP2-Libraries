@@ -5,5 +5,5 @@ Self-Sovereign Identities eco-system.
 
 Current protocols considered:
 
-- [OpenID4VC](./Communication-Protocols/OpenID4VC.md)
-- [DIDComm V2](./Communication-Protocols/DIDCommV2.md)
+- [OpenID4VC](./OpenID4VC.md)
+- [DIDComm](./DIDComm.md)
