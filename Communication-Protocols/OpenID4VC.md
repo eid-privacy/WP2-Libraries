@@ -6,27 +6,26 @@ OpenID for Verifiable Credentials (OID4VC) is a family of protocols enabling sec
 
 | Library / Repo                                                                            | Language        | Roles Supported      | Description                                                          | Maturity                                |
 |-------------------------------------------------------------------------------------------|-----------------|----------------------|----------------------------------------------------------------------|-----------------------------------------|
-| [~~walt.id waltid-ssikit~~](https://github.com/walt-id/waltid-ssikit)                     | ~~Kotlin/Java~~ | ~~Wallet, Issuer~~   | ~~Comprehensive SSI toolkit supporting OID4VCI, OID4VP, and SIOPv2~~ | **Deprecated**                          |
-| [SpruceID oidc4vci-rs](https://github.com/spruceid/oidc4vci-rs)                           | Rust            | Issuer               | Implements OID4VCI for credential issuance                           | Weakly documented                       |
-| [~~SpruceID oidc4vci-issuer~~](https://github.com/spruceid/oidc4vci-issuer)               | ~~Rust~~        | ~~Issuer~~           | ~~OID4VCI issuer implementation~~                                    | **Deprecated**                          |
 | [Sphereon OpenID4VCI](https://github.com/Sphereon-Opensource/OpenID4VCI)                  | TypeScript      | Wallet, Issuer       | SDK for OID4VCI flows                                                | Very well-documented and well developed |
+| [SpruceID oidc4vci-rs](https://github.com/spruceid/oidc4vci-rs)                           | Rust            | Issuer               | Implements OID4VCI for credential issuance                           | Poorly documented                       |
 | [TrustBloc wallet-sdk](https://github.com/trustbloc/wallet-sdk)                           | Go              | Wallet               | APIs for wallets to receive credentials via OID4VCI                  | Too high level                          |
 | [TrustBloc vcs](https://github.com/trustbloc/vcs)                                         | Go              | Issuer, Verifier     | Verifiable Credential Service with OID4VCI and OID4VP support        | Too high level                          |
 | [Authlete oid4vci-demo](https://github.com/authlete/oid4vci-demo)                         | Ruby            | Issuer               | Demo implementation for OID4VCI                                      | Demo                                    |
 | [blockchain-lab-um/oid4vc-monorepo](https://github.com/blockchain-lab-um/oid4vc-monorepo) | TypeScript      | Issuer, Verifier, RP | Modular OID4VC implementation                                        | Example                                 |
-
+| [~~walt.id waltid-ssikit~~](https://github.com/walt-id/waltid-ssikit)                     | ~~Kotlin/Java~~ | ~~Wallet, Issuer~~   | ~~Comprehensive SSI toolkit supporting OID4VCI, OID4VP, and SIOPv2~~ | **Deprecated**                          |
+| [~~SpruceID oidc4vci-issuer~~](https://github.com/spruceid/oidc4vci-issuer)               | ~~Rust~~        | ~~Issuer~~           | ~~OID4VCI issuer implementation~~                                    | **Deprecated**                          |
 
 ## OID4VP (OpenID for Verifiable Presentations)
 
-| Library / Repo                                                                            | Language        | Roles Supported      | Description                                  | Maturity                     |
-|-------------------------------------------------------------------------------------------|-----------------|----------------------|----------------------------------------------|------------------------------|
-| [~~walt.id waltid-ssikit~~](https://github.com/walt-id/waltid-ssikit)                     | ~~Kotlin/Java~~ | ~~Wallet, Verifier~~ | ~~Supports OID4VP and EBSI/ESSIF use cases~~ | Deprecated                   |
-| [SpruceID openid4vp](https://github.com/spruceid/openid4vp)                               | Rust            | Verifier             | Rust implementation of OID4VP                | little to no documentation   |
-| [~~Sphereon SIOP-OpenID4VP~~](https://github.com/Sphereon-Opensource/SIOP-OpenID4VP)      | ~~TypeScript~~  | ~~Wallet, Verifier~~ | ~~SIOPv2 and OID4VP support~~                | Deprecated                   |
-| [Sphereon ssi-sdk](https://github.com/Sphereon-Opensource/ssi-sdk)                        | TypeScript      | Wallet, Verifier     | SDK with OID4VP and SIOPv2 support           | **NEEDS MORE REVIEW**        |
-| [Microsoft VC-SDK-Android](https://github.com/microsoft/VerifiableCredential-SDK-Android) | Java            | Wallet               | Android SDK for VCs and OID4VP               | high level - well documented |
-| [Microsoft VC-SDK-iOS](https://github.com/microsoft/VerifiableCredential-SDK-iOS)         | Swift           | Wallet               | iOS SDK for VCs and OID4VP                   | high level - well-documented |
-| [TrustBloc wallet-sdk](https://github.com/trustbloc/wallet-sdk)                           | Go              | Wallet               | OID4VP support for credential presentation   | well-documented              |
+| Library / Repo                                                                                   | Language        | Roles Supported      | Description                                  | Maturity                     |
+|--------------------------------------------------------------------------------------------------|-----------------|----------------------|----------------------------------------------|------------------------------|
+| [Sphereon ssi-sdk](https://github.com/Sphereon-Opensource/ssi-sdk)                               | TypeScript      | Wallet, Verifier     | SDK with OID4VP and SIOPv2 support           | Active & Well-documented     |
+| [TrustBloc wallet-sdk](https://github.com/trustbloc/wallet-sdk)                                  | Go              | Wallet               | OID4VP support for credential presentation   | well-documented              |
+| [Microsoft VC-SDK-Android](https://github.com/microsoft/entra-verifiedid-wallet-library-android) | Java            | Wallet               | Android SDK for VCs and OID4VP               | high level - well documented |
+| [Microsoft VC-SDK-iOS](https://github.com/microsoft/entra-verifiedid-wallet-library-ios)         | Swift           | Wallet               | iOS SDK for VCs and OID4VP                   | high level - well-documented |
+| [SpruceID openid4vp](https://github.com/spruceid/openid4vp)                                      | Rust            | Verifier             | Rust implementation of OID4VP                | little to no documentation   |
+| [~~walt.id waltid-ssikit~~](https://github.com/walt-id/waltid-ssikit)                            | ~~Kotlin/Java~~ | ~~Wallet, Verifier~~ | ~~Supports OID4VP and EBSI/ESSIF use cases~~ | **Deprecated**               |
+| [~~Sphereon SIOP-OpenID4VP~~](https://github.com/Sphereon-Opensource/SIOP-OpenID4VP)             | ~~TypeScript~~  | ~~Wallet, Verifier~~ | ~~SIOPv2 and OID4VP support~~                | **Deprecated**               |
 
 ## SIOPv2 (Self-Issued OpenID Provider v2)
 Sometimes offered by other OID4VP libraries, but doesn't have its own library.

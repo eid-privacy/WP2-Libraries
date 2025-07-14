@@ -23,8 +23,7 @@ The DIDComm v2 ecosystem has matured significantly, with **SICPA** being the pri
 | Library                                                                    | Language    | Organization | Key Features   (Summarized by an LLM)                                     |
 |----------------------------------------------------------------------------|-------------|--------------|---------------------------------------------------------------------------|
 | **[DIDComm Python](https://github.com/sicpa-dlab/didcomm-python)**         | Python      | SICPA        | Basic DIDComm v2 support, encryption, signing, peer-to-peer communication |
-| **[DIDComm Rust](https://github.com/sicpa-dlab/didcomm-rust)**             | Rust        | SICPA        | Core implementation with WASM bindings for JS/TS and Swift wrappers       |
-| **[DIDComm JavaScript/TypeScript](https://www.npmjs.com/package/didcomm)** | JS/TS       | SICPA        | WASM-based, browser and NodeJS compatible                                 |
+| **[DIDComm Rust](https://github.com/sicpa-dlab/didcomm-rust)**             | Rust/JS/TS  | SICPA        | Core implementation with WASM bindings for JS/TS and Swift wrappers       |
 | **[DIDComm JVM](https://github.com/sicpa-dlab/didcomm-jvm)**               | Java/Kotlin | SICPA        | Android support, multiple message formats                                 |
 | **[DIDComm Swift](https://github.com/beatt83/didcomm-swift)**              | Swift       | beatt83      | Native iOS support, advanced routing capabilities                         |
 
@@ -33,8 +32,8 @@ The DIDComm v2 ecosystem has matured significantly, with **SICPA** being the pri
 | Library                                                                                      | Language   | Organization          | Focus        (Summarized by an LLM)                          |
 |----------------------------------------------------------------------------------------------|------------|-----------------------|--------------------------------------------------------------|
 | **[Aries Cloud Agent Python](http://github.com/openwallet-foundation/acapy)**                | Python     | Hyperledger           | Enterprise agent framework with DIDComm v2 envelope handling |
-| **[DIDComm Mediator Credo](http://github.com/openwallet-foundation/didcomm-mediator-credo)** | TypeScript | OpenWallet Foundation | Mediator services, message pickup protocols                  |
 | **[Veramo DIDComm](https://github.com/decentralized-identity/veramo)**                       | TypeScript | Veramo Team           | Used in MetaMask plugin, SSI framework integration           |
+| **[DIDComm Mediator Credo](http://github.com/openwallet-foundation/didcomm-mediator-credo)** | TypeScript | OpenWallet Foundation | Mediator services, message pickup protocols                  |
 
 ### DID:webvh (formerly Trust DID Web DID:tdw)
 This is the DID Method used in swiyu.
