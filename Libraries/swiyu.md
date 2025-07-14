@@ -1,17 +1,26 @@
+## swiyu - The Swiss E-ID ecosystem implementation
 This file contains work notes on our demo project: https://github.com/eid-privacy/swiyu-demo
 
 The goal of this project is to build an environment where we can test all the functionalities 
 supported by the SWIYU infrastructure.
 
-## TODO
-- add verifier flow
-- link diploma credential with identity credential
-
-## Done
-- added diploma VC
-- added nginx proxy
-- ported frontend of previous demo
-- installed on eid.c4dt.org
+### Project Summary
+- We successfully managed to build a full practical demo based on the current open source libraries
+within the swiyu ecosystem (open-sourced by the swiyu team).  
+- We also incorporated Selective disclosure within the workflows.  
+- And based one of the workflows on swiyu's Beta ID which proves how easy it is to integrate
+this ecosystem.
+- Two interesting point that need further investigation are:
+  - Revokation which required an active OAuth2 token which requires a level of automation. 
+  - DID creation: the issuer/verifier onboarding process is a bit tedious, and probably needs 
+    some simplification or automation.
+#### To-Do
+-[x] added diploma VC
+-[x] added nginx proxy
+-[x] ported frontend of previous demo
+-[x] installed on eid.c4dt.org
+-[x] added verifier flow
+-[x] linked diploma credential with identity credential
 
 ## Weekly logs
 ### Week 18 - April 28th
@@ -44,9 +53,6 @@ Steps:
 - Instructions were confusing and I had to repeat the process a couple of times.  
 - I wrote a script that helps reduce duplications but is still not automated fully. 
 - Backend had multiple issues:  
-
-    ![issues-list](./2025-04-28.1.png)
-
     Luckily, most of my issues have already been answered which helped a lot to move forward. 
 
     *But it took a lot of time before connecting the problems I was facing with these on the list above.*
@@ -116,5 +122,11 @@ Analyzing the requests that happen -from wallet to issuer server- after reading 
 - https://github.com/c4dt/SWIYU-demo  
 - Our test environment available on https://eid.c4dt.org
 
-### Week 21 - May 19
-**GOALS: Enhance issue workflow with no bugs, and move to verifier flow.**
+### Weeks 21 to 25
+**GOALS:**
+- Enhance issue workflow with no bugs.
+- Move to verifier flow.
+- Incorporate the swiyu team's Beta ID into the issuance flow.
+- Prepare the whole demo.
+
+I didn't keep up with traditional remarks as I was in a rust to meet the deadline for the workshop.
