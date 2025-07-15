@@ -1,4 +1,4 @@
->[!Warning] Archived and replaced by [[mattr-pairing-crypto]]
+> [!Warning] Archived and replaced by [[mattr-pairing-crypto]]
 
 **Repository**: https://github.com/mattrglobal/bbs-signatures
 **Language:** TypeScript + Rust
