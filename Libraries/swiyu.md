@@ -1,4 +1,4 @@
-## swiyu - The Swiss E-ID ecosystem implementation
+## Swiyu - The Swiss E-ID ecosystem implementation
 
 This file contains work notes on our demo project: https://github.com/eid-privacy/swiyu-demo
 
