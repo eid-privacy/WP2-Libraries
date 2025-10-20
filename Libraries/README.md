@@ -17,5 +17,5 @@
 
 ## Experiments
 
-- [Ahmed's notes on using Swiyu](./Work-Notes/README.md) - Porting the previous e-ID demo
+- [Ahmed's notes on using Swiyu](./swiyu.md) - Porting the previous e-ID demo
   issuing diplomas to the new infrastructure
