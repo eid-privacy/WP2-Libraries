@@ -15,3 +15,9 @@ check_prettier:
 prettier:
 	@find . -name "*.md" | grep -v LICENSE.md | xargs npx prettier -w
 
+generate-readme:
+	@python3 scripts/generate_readme.py
+
+test-readme: generate-readme
+	@git diff --quiet README.md || (echo "ERROR: README.md needs updating!" && exit 1)
+

@@ -1,0 +1,101 @@
+name: Generate README
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # Trigger on YAML files
+      - '**.yaml'
+      - '**.yml'
+      # Trigger on supporting files
+      - 'HEADER.md'
+      - 'FOOTER.md'
+      - '**/README.md'
+      - 'scripts/generate_readme.py'
+      # CRITICAL: Exclude root README.md to prevent infinite loops
+      - '!README.md'
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**.yaml'
+      - '**.yml'
+      - 'HEADER.md'
+      - 'FOOTER.md'
+      - '**/README.md'
+      - 'scripts/generate_readme.py'
+      - '!README.md'
+
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write        # Required for pushing commits
+  pull-requests: write   # Required for PR comments
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run README generation script
+        id: generate
+        run: |
+          python scripts/generate_readme.py --verbose
+        continue-on-error: true
+
+      - name: Check if script succeeded
+        if: steps.generate.outcome == 'failure'
+        run: |
+          echo "::error::README generation failed. See logs above for validation errors."
+          exit 1
+
+      - name: Check for changes
+        id: git_status
+        run: |
+          git diff --quiet README.md || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push (main branch only)
+        if: |
+          steps.git_status.outputs.changed == 'true' &&
+          github.ref == 'refs/heads/main' &&
+          github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: auto-generate README.md"
+          git push
+
+      - name: Fail check if README out of sync (PRs only)
+        if: |
+          steps.git_status.outputs.changed == 'true' &&
+          github.event_name == 'pull_request'
+        run: |
+          echo "::error::README.md is out of sync with YAML entries. Run 'python scripts/generate_readme.py' locally and commit the changes."
+          exit 1
+
+      - name: Comment on PR
+        if: |
+          steps.git_status.outputs.changed == 'true' &&
+          github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '⚠️ **README.md is out of sync**\n\nPlease run the following command locally and commit the updated README:\n\n```bash\npython scripts/generate_readme.py\n```\n\nOr use Make:\n\n```bash\nmake generate-readme\n```'
+            })
