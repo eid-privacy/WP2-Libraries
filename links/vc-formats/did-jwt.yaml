@@ -1,0 +1,16 @@
+name: DID-JWT
+organization: Sphereon
+url: https://github.com/Sphereon-Opensource/did-jwt
+language: Typescript
+purpose: Simple DID-JWT implemntation
+evaluation_criteria:
+  software_structure: 5
+  unit_tests_ci_cd: 2
+  license_ownership: 3
+  amenity_to_change: 2
+  documentation: 5
+  probable_support: 2
+note: The crypto libraries, and the communication libraries are mature, but there's
+  not really a lot of libraries on VC formats. Maybe that's because they're a minor
+  part that's always incorporated into bigger projects? (For example, longfellow uses
+  CBOR, dock-crypto uses C

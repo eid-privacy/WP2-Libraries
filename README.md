@@ -14,6 +14,61 @@ This repository serves as a comprehensive reference for developers, researchers,
 
 ---
 
+## Tables of Entries
+
+Below are the tables of evaluated libraries and protocols. Each table is organized by category and automatically generated from the YAML entry files.
+
+## Zero-Knowledge Libraries
+
+Libraries focused on zero-knowledge proofs, including proof systems, cryptographic primitives, and ZK-specific constructs.
+
+| Name | Organization | Language | Purpose | Quality | Note |
+|------|--------------|----------|---------|---------|------|
+| [Arkworks Algebra](https://github.com/arkworks-rs/algebra) | Arkworks | Rust | ZKSnark low level constructs | 5.0/5.0 | Probably the best engineered, and most suppoted project on this list. |
+| [Arkworks-crypto-primitives](https://github.com/arkworks-rs/crypto-primitives) | Arkworks | Rust | Crypto primitives | 4.2/5.0 | Bad documentation, and not clear how to use it |
+| [Crescent](https://github.com/microsoft/crescent-credentials) | Microsoft | Rust | E-ID ZKP library | 4.3/5.0 | Provides a full-cycle E-ID solution with good client, and examples |
+| [Docknetwork Crypto](https://github.com/docknetwork/crypto) | Dock Network | Rust | signatures, ZKPs, and high level constructs | 3.5/5.0 | One of The most comprehensive E-ID focused crypto library we know of |
+| [Longfellow](https://github.com/google/longfellow-zk) | Google | C++ | E-ID ZKP library | 3.5/5.0 | C++ with no foreign language wrappers - Unclear APIs |
+| [Pairing cryptography](https://github.com/mattrglobal/pairing_crypto) | MATTR Global | Rust | BBS signatures | 3.3/5.0 | Also bad documentation, but ported into multiple wrappers (languages) |
+| [Plonky 3](https://github.com/Plonky3/Plonky3) | dedicated organization | Rust | primitives for polynomial IOPs for STARK-based zkVMs | 3.8/5.0 | Great community but weak documentation, and high entry barrier. |
+| [Plonky2](https://github.com/0xPolygonZero/plonky2) | polygonzero | Rust | Polygon's ZK proving system. | 3.0/5.0 | Plonk2 on route to deprecation |
+| [Spartan](https://github.com/microsoft/Spartan) | Microsoft | Rust | Microsoft's Spartan proof system | 3.8/5.0 |  |
+| [ZKCrypto - BulletProofs](https://github.com/zkcrypto/bulletproofs) | ZK Crypto | Rust | The "fastest" bulletproof implementation | 3.3/5.0 | Focuses only on fast bulletproofs implementation -- Why is this forked from https://github.com/dalek-cryptography/bulletproofs |
+
+## Zero-Knowledge Circuit Frameworks
+
+Frameworks and DSLs for writing zero-knowledge circuits and constraint systems.
+
+| Name | Organization | Language | Purpose | Quality | Note |
+|------|--------------|----------|---------|---------|------|
+| [Circom](https://github.com/iden3/circom) | Iden3 | Rust / Web Assemply | Most popular circuit framework | 5.0/5.0 |  |
+| [libiop](https://github.com/scipr-lab/libiop) | SCIPR Lab | C++ | library for IOP-based zkSNARKs | 4.3/5.0 | Clement: might turn out useful as a basis for building stuff based on IOP |
+| [Noir-lang / Aztech / Ethereum foundation](https://github.com/noir-lang/noir) | Noir | Rust | Rust‑inspired DSL for writing ZK circuits | 2.7/5.0 | Huge project, with a big community. |
+| [Zcash](https://github.com/zcash/halo2) | Halo2 | Rust | Halo2 zero-knowledge proof system and circuit framework | 3.7/5.0 |  |
+
+## Communication Protocols - DIDComm
+
+Libraries implementing DIDComm protocols for secure, privacy-preserving communication in decentralized identity systems.
+
+| Name | Organization | Language | Purpose | Quality | Note |
+|------|--------------|----------|---------|---------|------|
+| [ACAPy](https://github.com/openwallet-foundation/acapy) | OpenWallet Foundation | Python | SSI Agent | 5.0/5.0 |  |
+| [DIDComm Mediator Credo](https://github.com/openwallet-foundation/didcomm-mediator-credo) | OpenWallet Foundation | Typescript | DIDComm mediator implementation for message routing and delivery | 5.0/5.0 |  |
+| [DIDComm Rust](https://github.com/sicpa-dlab/didcomm-rust) | SICPA | Rust | Rust implementation of DIDComm v2 messaging protocols | 3.7/5.0 |  |
+| [Veramo](https://github.com/decentralized-identity/veramo) | Decentralized Identity Foundation | Typescript | TypeScript framework for Verifiable Data and DIDComm messaging | 5.0/5.0 |  |
+
+## Verifiable Credential Formats
+
+Libraries supporting various VC formats including SD-JWT, mDoc/CBOR, and W3C VC Data Model implementations.
+
+| Name | Organization | Language | Purpose | Quality | Note |
+|------|--------------|----------|---------|---------|------|
+| [DID-JWT](https://github.com/Sphereon-Opensource/did-jwt) | Sphereon | Typescript | Simple DID-JWT implemntation | 3.2/5.0 | The crypto libraries, and the communication libraries are mature, but there's not really a lot of libraries on VC formats. Maybe that's because the... |
+| [One Core](https://github.com/procivis/one-core) | Procivis | Rust | All in One application, not specific to VC formats | 3.5/5.0 |  |
+| [SpruceID SSI](https://github.com/spruceid/ssi) | SpruceID | Rust | Implements VC data model among other things | 5.0/5.0 | Might be the best in this category, but needs more research |
+
+---
+
 ## How to Add a New Entry
 
 Adding a new entry is simple! Follow these steps:
@@ -155,24 +210,6 @@ This repository uses GitHub Actions to automatically generate the main README.md
 4. On pull requests: The workflow validates your changes and fails if there are errors
 
 The workflow **does not** trigger on README.md changes itself, preventing infinite loops.
-
----
-
-## Tables of Entries
-
-Below are the tables of evaluated libraries and protocols. Each table is organized by category and automatically generated from the YAML entry files.
-
-
-## Example Cryptographic Libraries
-
-This section contains example entries demonstrating the YAML-based evaluation format. These examples show how to properly structure entry files with all required fields and evaluation criteria.
-
-
-| Name | Organization | Language | Purpose | Quality | Note |
-|------|--------------|----------|---------|---------|------|
-| [DID Exchange Protocol](https://github.com/did-foundation/did-exchange) | Decentralized Identity Foundation | TypeScript | Implementation of DID exchange protocol for establishing secure peer-to-peer connections in SSI systems | 4.7/5.0 | Reference implementation used by multiple wallet providers. Follows DIDComm v2 specifications. |
-| [Example Crypto Library](https://github.com/example/crypto-library) | Crypto Foundation | Rust | High-performance cryptographic primitives including signatures, encryption, and zero-knowledge proofs for identity applications | 4.7/5.0 | Actively maintained with strong community support. Used in several production identity systems. |
-| [Minimal Signature Library](https://github.com/independent/minimal-sigs) | Independent | Go | Lightweight implementation of BLS signatures for credential verification | 3.0/5.0 |  |
 
 ---
 

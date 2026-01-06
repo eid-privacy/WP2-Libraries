@@ -1,0 +1,13 @@
+name: Crescent
+organization: Microsoft
+url: https://github.com/microsoft/crescent-credentials
+language: Rust
+purpose: E-ID ZKP library
+evaluation_criteria:
+  software_structure: 5
+  unit_tests_ci_cd: 3
+  license_ownership: 5
+  amenity_to_change: 5
+  documentation: 3
+  probable_support: 5
+note: Provides a full-cycle E-ID solution with good client, and examples

@@ -1,0 +1,12 @@
+name: Veramo
+organization: Decentralized Identity Foundation
+url: https://github.com/decentralized-identity/veramo
+language: Typescript
+purpose: TypeScript framework for Verifiable Data and DIDComm messaging
+evaluation_criteria:
+  software_structure: 5
+  unit_tests_ci_cd: 5
+  license_ownership: 5
+  amenity_to_change: 5
+  documentation: 5
+  probable_support: 5

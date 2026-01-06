@@ -1,0 +1,13 @@
+name: libiop
+organization: SCIPR Lab
+url: https://github.com/scipr-lab/libiop
+language: C++
+purpose: library for IOP-based zkSNARKs
+evaluation_criteria:
+  software_structure: 5
+  unit_tests_ci_cd: 5
+  license_ownership: 5
+  amenity_to_change: 3
+  documentation: 5
+  probable_support: 3
+note: 'Clement: might turn out useful as a basis for building stuff based on IOP'

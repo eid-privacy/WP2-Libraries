@@ -1,16 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.1/.schema/devbox.schema.json",
-  "packages": [
-    "nodejs@22"
-  ],
+  "packages": ["nodejs@22", "python3@latest", "python313Packages.pip@latest"],
   "shell": {
+    "init_hook": [". $VENV_DIR/bin/activate", "pip install pyyaml"],
     "scripts": {
-      "prettier": [
-        "make prettier"
-      ],
-      "test": [
-        "make"
-      ]
+      "prettier": ["make prettier"],
+      "test": ["make"],
+      "readme": ["python scripts/generate_readme.py"]
     }
   }
 }

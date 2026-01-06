@@ -1,0 +1,13 @@
+name: Longfellow
+organization: Google
+url: https://github.com/google/longfellow-zk
+language: C++
+purpose: E-ID ZKP library
+evaluation_criteria:
+  software_structure: 5
+  unit_tests_ci_cd: 3
+  license_ownership: 3
+  amenity_to_change: 3
+  documentation: 2
+  probable_support: 5
+note: C++ with no foreign language wrappers - Unclear APIs

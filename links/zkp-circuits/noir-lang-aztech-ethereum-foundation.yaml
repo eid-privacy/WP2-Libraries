@@ -1,0 +1,13 @@
+name: Noir-lang / Aztech / Ethereum foundation
+organization: Noir
+url: https://github.com/noir-lang/noir
+language: Rust
+purpose: Rust‑inspired DSL for writing ZK circuits
+evaluation_criteria:
+  software_structure: 2
+  unit_tests_ci_cd: 2
+  license_ownership: 5
+  amenity_to_change: 3
+  documentation: 2
+  probable_support: 2
+note: Huge project, with a big community.
